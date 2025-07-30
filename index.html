@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Website</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style2.css" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- header section -->
+
+  <header>
+    <div class="container header-flex">
+      <div class="logo">GYM POWER</div>
+      <!-- nav-links -->
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#">عن الجيم</a></li>
+          <li><a href="#">الكورسات</a></li>
+          <li><a href="#">المدربين</a></li>
+          <li><a href="#">تواصل معنا</a></li>
+        </ul>
+        <div class="close-btn" onclick="toggleMenu()">✖</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+
+  <section class="hero" id="home">
+    <div class="hero-overlay">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>ابدأ رحلتك الرياضية معنا</h1>
+        <p>تدريب محترف للرجال، النساء، والأطفال بأحدث المعدات والمدربين المعتمدين.</p>
+        <a href="#courses" class="hero-btn">اكتشف خدماتنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- courses section -->
+
+  <section id="courses" class="courses-section">
+    <div class="section-header" data-aos="fade-down">
+      <h2>كورسات التدريب</h2>
+      <p>اختر الفئة المناسبة وابدأ رحلتك الرياضية</p>
+    </div>
+
+    <!-- فلاتر -->
+    <div class="course-filters" data-aos="fade-up">
+      <button class="filter-btn active" onclick="filterCourses('all', this)">الكل</button>
+      <button class="filter-btn" onclick="filterCourses('men', this)">رجال</button>
+      <button class="filter-btn" onclick="filterCourses('women', this)">نساء</button>
+      <button class="filter-btn" onclick="filterCourses('kids', this)">أطفال</button>
+    </div>
+
+    <!-- الكورسات -->
+    <div class="course-grid">
+      <!-- رجال -->
+      <div class="course-card men" data-aos="zoom-in">
+        <img src="picture/strength.jpg" alt="">
+        <div class="card-content">
+          <h3>قوة العضلات</h3>
+          <p>برنامج متكامل لبناء الكتلة العضلية.</p>
+        </div>
+      </div>
+
+      <div class="course-card men" data-aos="zoom-in">
+        <img src="picture/cardio.jpg" alt="">
+        <div class="card-content">
+          <h3>كارديو مكثف</h3>
+          <p>تحسين اللياقة البدنية وحرق الدهون بسرعة.</p>
+        </div>
+      </div>
+
+      <!-- نساء -->
+      <div class="course-card women" data-aos="zoom-in">
+        <img src="picture/fit-women.jpg" alt="">
+        <div class="card-content">
+          <h3>رشاقة نسائية</h3>
+          <p>تمارين نحت الجسم للسيدات.</p>
+        </div>
+      </div>
+
+      <div class="course-card women" data-aos="zoom-in">
+        <img src="picture/yoga.jpg" alt="">
+        <div class="card-content">
+          <h3>يوغا واسترخاء</h3>
+          <p>جلسات مهدئة لتحسين المرونة النفسية والبدنية.</p>
+        </div>
+      </div>
+
+      <!-- أطفال -->
+      <div class="course-card kids" data-aos="zoom-in">
+        <img src="picture/kids-gym.jpg" alt="">
+        <div class="card-content">
+          <h3>حركة ونشاط</h3>
+          <p>تطوير مهارات الأطفال في بيئة آمنة.</p>
+        </div>
+      </div>
+
+      <div class="course-card kids" data-aos="zoom-in">
+        <img src="picture/kids-yoga.jpg" alt="">
+        <div class="card-content">
+          <h3>يوغا للأطفال</h3>
+          <p>تحسين التركيز والمرونة بطريقة ممتعة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- trainer -->
+
+  <section id="trainers" class="trainers-section">
+    <div class="section-title" data-aos="fade-up">
+      <h2>مدربينا المحترفين</h2>
+      <p>فريق مدربين متميزون في مختلف التخصصات الرياضية</p>
+    </div>
+
+    <div class="trainers-container">
+      <div class="trainer-card" data-aos="zoom-in">
+        <img src="picture/trainer1.jpg" alt="مدرب كمال أجسام">
+        <h3>كابتن أحمد سمير</h3>
+        <p>مدرب كمال أجسام</p>
+      </div>
+
+      <div class="trainer-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="picture/trainer2.jpeg" alt="مدربة لياقة بدنية">
+        <h3>كابتن مي عبد الله</h3>
+        <p>مدربة لياقة بدنية</p>
+      </div>
+
+      <div class="trainer-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="picture/trainer3.jpeg" alt="مدرب أطفال">
+        <h3>كابتن كريم حسن</h3>
+        <p>مدرب أطفال</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- الاشتراك -->
+
+  <section id="pricing" class="pricing-section">
+    <div class="section-title" data-aos="fade-up">
+      <h2>خطط الاشتراك</h2>
+      <p>اختر الباقة اللي تناسب أهدافك وابدأ رحلتك الرياضية!</p>
+    </div>
+
+    <div class="pricing-container">
+      <div class="pricing-card" data-aos="fade-up">
+        <h3>شهري</h3>
+        <p class="price">250 جنيه</p>
+        <ul>
+          <li>دخول يومي</li>
+          <li>مدرب متواجد</li>
+          <li>تمارين كارديو</li>
+          <li>جداول تدريب</li>
+        </ul>
+        <a href="#subscribe" class="btn">اشترك الآن</a>
+      </div>
+
+      <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="100">
+        <h3>3 شهور</h3>
+        <p class="price">600 جنيه</p>
+        <ul>
+          <li>كل مزايا الاشتراك الشهري</li>
+          <li>جلسات متابعة مجانية</li>
+          <li>خصم على المكملات</li>
+          <li>استشارة تغذية</li>
+        </ul>
+        <a href="#subscribe" class="btn">اشترك الآن</a>
+      </div>
+
+      <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>سنوي</h3>
+        <p class="price">2000 جنيه</p>
+        <ul>
+          <li>كل مزايا الباقات السابقة</li>
+          <li>تيشيرت رياضي هدية</li>
+          <li>جلسات تدريب خاصة</li>
+          <li>تحليل جسم مجاني</li>
+        </ul>
+        <a href="#subscribe" class="btn">اشترك الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonials -->
+
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-title" data-aos="fade-up">
+      <h2>آراء عملائنا</h2>
+      <p>ماذا قال أبطالنا عن تجربتهم في الجيم؟</p>
+    </div>
+
+    <div class="testimonials-container">
+      <div class="testimonial" data-aos="fade-right">
+        <p>"بعد 3 شهور تدريب هنا، حياتي اتغيرت تمامًا، جسم رياضي وطاقة طول اليوم!"</p>
+        <h4>أحمد خالد</h4>
+        <span>عضو منذ 2024</span>
+      </div>
+
+      <div class="testimonial" data-aos="fade-up">
+        <p>"أحسن جيم دخلته، المدربين محترفين جدًا والتعامل راقي جدًا."</p>
+        <h4>سارة حسين</h4>
+        <span>عضوة منذ 2023</span>
+      </div>
+
+      <div class="testimonial" data-aos="fade-left">
+        <p>"أنا ابني الصغير بيتمرن في كورسات الأطفال، ومبسوط جدًا والمدرب بيشجعه دايمًا."</p>
+        <h4>محمد الجوهري</h4>
+        <span>ولي أمر</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- subscribe -->
+
+  <section id="subscribe" class="subscribe-section">
+    <div class="subscribe-container">
+      <div class="subscribe-image" data-aos="fade-right">
+        <img src="picture/logo.jpg" alt="Join Gym">
+      </div>
+
+      <form class="subscribe-form" data-aos="fade-left">
+        <h2>اشترك الآن</h2>
+        <p>ابدأ رحلتك نحو اللياقة معنا 💪</p>
+
+        <div class="form-group">
+          <input type="text" name="name" placeholder="الاسم بالكامل" required>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+        </div>
+
+        <div class="form-group">
+          <select name="plan" required>
+            <option value="">اختر نوع الاشتراك</option>
+            <option value="رجال">رجال</option>
+            <option value="نساء">نساء</option>
+            <option value="أطفال">أطفال</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <textarea name="notes" rows="3" placeholder="ملاحظات (اختياري)"></textarea>
+        </div>
+
+        <button type="submit" class="btn">اشترك الآن</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- contact -->
+
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+
+      <div class="contact-info" data-aos="fade-right">
+        <h2>تواصل معنا</h2>
+        <p>نحن هنا للإجابة على كل استفساراتك، تواصل معنا في أي وقت 💬</p>
+
+        <ul class="social-icons">
+          <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://wa.me/201234567890" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+          <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+
+      <form class="contact-form" data-aos="fade-left">
+        <input type="text" placeholder="الاسم" required>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+        <button type="submit" class="btn">إرسال</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- footer -->
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-about">
+        <h3>عن الجيم</h3>
+        <p>نحن نقدم أفضل الكورسات والخدمات الرياضية للرجال والنساء والأطفال في بيئة صحية وآمنة 💪</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>روابط سريعة</h3>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#courses">الكورسات</a></li>
+          <li><a href="#trainers">المدربين</a></li>
+          <li><a href="#plans">الاشتراكات</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>تابعنا</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 جميع الحقوق محفوظة | جيم فتنس</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+
+</html>
